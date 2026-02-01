@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Ziheng Xiong</title>
+    <!-- 引入 FontAwesome 图标库 (用于显示 GitHub, Google Scholar 等图标) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- 全局样式 --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2E7D32; /* 这里的绿色参考了截图中的配色 */
+            transition: 0.3s;
+        }
+        a:hover {
+            color: #1b5e20;
+            text-decoration: underline;
+        }
+
+        /* --- 顶部导航栏 --- */
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            color: #2E7D32;
+        }
+
+        /* --- 页面主体布局 --- */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            gap: 50px; /* 左右栏间距 */
+        }
+
+        /* --- 左侧边栏 (个人信息) --- */
+        .sidebar {
+            width: 280px;
+            flex-shrink: 0;
+            text-align: left;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* 圆形头像 */
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .name-title h2 {
+            margin: 10px 0 5px 0;
+            font-size: 1.4rem;
+        }
+        .position {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .social-links li {
+            margin-bottom: 8px;
+        }
+        .social-links i {
+            width: 20px;
+            color: #444;
+        }
+
+        /* --- 右侧主要内容 --- */
+        .main-content {
+            flex-grow: 1;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        h1.intro-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+        
+        .bio-text {
+            font-size: 1.05rem;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .lab-highlight {
+            color: #2E7D32;
+            font-weight: bold;
+        }
+
+        /* 模拟截图中的图表区域 */
+        .research-diagram {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fafafa;
+            margin-top: 30px;
+        }
+        .research-diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+        .diagram-caption {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #2E7D32;
+            font-size: 1.2rem;
+        }
+
+        /* --- 响应式适配 (手机端) --- */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links {
+                display: none; /* 手机端暂时隐藏导航，或者你可以改成下拉菜单 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div style="font-weight: bold; font-size: 1.2rem; color:#444;">Ziheng Xiong's Website</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Publications</a>
+            <a href="#">Research</a>
+            <a href="#">CV</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <!-- 头像：请将你的照片命名为 profile.jpg 并放在同一目录下，或者修改 src -->
+            <img src="assets/images/portrait2.jpg" alt="Profile Picture" class="profile-img">
+            
+            <div class="name-title">
+                <h2>Ziheng Xiong</h2>
+            </div>
+            
+            <div class="position">
+                Undergraduate Student<br>
+                Department of Electronic Engineering<br>
+                The Chinese University of Hong Kong
+            </div>
+
+            <div class="contact-info">
+                Email: 1155186155@link.cuhk.edu.hk<br>
+                Office: Not Available
+            </div>
+
+            <div class="social-links">
+                <ul>
+                    <li><a href="mailto:1155186155@link.cuhk.edu.hk"><i class="fas fa-envelope"></i> Email</a></li>
+                    <li><a href="#"><i class="fab fa-researchgate"></i> ResearchGate</a></li>
+                    <li><a href="https://linkedin.com/in/chrisxiongziheng/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://github.com/Shialley" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=4tMafWAAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a></li>
+                    <li><a href="https://orcid.org/0009-0002-4639-9080" target="_blank"><i class="fab fa-orcid"></i> ORCID</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 右侧主要内容 -->
+        <main class="main-content">
+            <h1 class="intro-title">Hi, I am Xiong Ziheng (熊子恒)</h1>
+            
+            <div class="bio-text">
+                <p>
+                    I am currently an <b>Undergraduate student</b> at the Department of Electronic Engineering, 
+                    the Chinese University of Hong Kong (CUHK), supervised by Prof. Hongsheng Li and Prof. Ka Nang LEUNG. 
+                </p>
+                <p>
+                    My research interests include <b>AI Infra</b>, <b>Recommender Systems</b>, and <b>Reinforcement Learning</b>.
+                    <!-- Currently, I am working on the <span class="lab-highlight">NICE Project</span>. -->
+                </p>
+            </div>
+            
+        <!--
+            <div class="research-diagram">
+                <div class="diagram-caption">TOWARD UBIQUITOUS INTELLIGENCE</div>
+                <p style="font-size: 0.9rem; color: #888; margin-bottom: 20px;">NETWORK FOR AI × AI FOR NETWORK</p>
+                <img src="https://via.placeholder.com/800x400?text=Place+Your+Research+Diagram+Here" alt="Research Diagram">
+            </div>
+        -->
+            <br>
+            <h3>News</h3>
+            <ul>
+                <li>[2022.09] Started my Undergrad. journey at CUHK.</li>
+            </ul>
+
+        </main>
+    </div>
+
+</body>
+</html>
